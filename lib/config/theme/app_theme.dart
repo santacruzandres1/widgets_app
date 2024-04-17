@@ -16,5 +16,10 @@ class AppTheme {
       : assert(selectedColor >= 0 && selectedColor <= colorList.length-1,
             'selectedColor must be between 0(zero included) and ${colorList.length - 1} ');
 
-  ThemeData getTheme() => ThemeData(colorSchemeSeed: colorList[selectedColor]);
+  ThemeData getTheme() => ThemeData(
+    colorSchemeSeed: colorList[selectedColor],
+    appBarTheme: const AppBarTheme(
+      centerTitle: true,
+    )
+  );
 }
