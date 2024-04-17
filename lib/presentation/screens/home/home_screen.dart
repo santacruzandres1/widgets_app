@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
    HomeScreen({super.key});
 
   // definir las rutas aca (asumiendo que tenemos un archivo o clase separada para las rutas) 
+  //TODO: Mover estas rutas a otro archivo para un codigo mas limpio
   final Map<String, WidgetBuilder> routes = {
     '/buttons_screen': (context) => const ButtonsScreen(),
     '/cards_screen':(context) => const CardsScreen(),

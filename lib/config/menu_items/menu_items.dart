@@ -37,7 +37,7 @@ const appMenuItems = <MenuItems>[
     title: 'Settings',
     subTitle: 'Configuraciones de Usuario',
     link: '/settings',
-    icon: Icons.credit_card,
+    icon: Icons.settings,
     routeName: '/settings_screen', 
   ),
 ];
