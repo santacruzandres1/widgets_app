@@ -49,7 +49,7 @@ class _CustomListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        final routeName = menuItem.link;
+        final routeName = menuItem.routeName;
 
         if (AppRouter.routes.containsKey(routeName)) {
           Navigator.pushNamed(context, routeName);
