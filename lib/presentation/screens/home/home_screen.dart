@@ -49,12 +49,13 @@ class _CustomListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        final routeName = menuItem.routeName;
+        final routeName = menuItem.link;
 
         if (AppRouter.routes.containsKey(routeName)) {
           Navigator.pushNamed(context, routeName);
         } else {
           // Aca podria estar el manejo de errores(rutas invalidas)
+          throw const Text('Error 404: Ivalid path');
         }
       },
     );
