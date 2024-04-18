@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_app/presentation/widgets/custom_cards.dart';
+import 'package:widgets_app/presentation/widgets/cards/custom_cards.dart';
 
 class CardsScreen extends StatelessWidget {
   static const String name = 'cards_screen';
@@ -8,6 +8,6 @@ class CardsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomCards();
+    return const CustomCards();
   }
 }
