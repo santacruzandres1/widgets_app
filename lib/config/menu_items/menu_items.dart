@@ -6,7 +6,7 @@ class MenuItems {
   final String subTitle;
   final String link;
   final IconData icon;
-  final String routeName;
+  final String? routeName;
 
 
   const MenuItems({
@@ -14,7 +14,7 @@ class MenuItems {
     required this.subTitle, 
     required this.link, 
     required this.icon,
-    required this.routeName
+     this.routeName
     });
 }
 
@@ -24,27 +24,27 @@ const appMenuItems = <MenuItems>[
     subTitle: 'Varios Botones en FLutter',
     link: '/buttons',
     icon: Icons.smart_toy_outlined,
-    routeName: '/buttons_screen',
+    // routeName: '/buttons_screen',
   ),
   MenuItems(
     title: 'Tarjetas',
     subTitle: 'Un contenedor estilizado',
     link: '/cards',
     icon: Icons.credit_card,
-    routeName: '/cards_screen', 
+    // routeName: '/cards_screen', 
   ),
   MenuItems(
-    title: 'Tarjetas',
-    subTitle: 'Un contenedor estilizado',
-    link: '/cards',
-    icon: Icons.credit_card,
-    routeName: '/cards_screen', 
+    title: 'ProgressIndicator',
+    subTitle: 'Generales y controlados',
+    link: '/progress',
+    icon: Icons.refresh_rounded,
+    // routeName: '/progress_screen', 
   ),
   MenuItems(
     title: 'Settings',
     subTitle: 'Configuraciones de Usuario',
     link: '/settings',
     icon: Icons.settings,
-    routeName: '/settings_screen', 
+    // routeName: '/settings_screen', 
   ),
 ];

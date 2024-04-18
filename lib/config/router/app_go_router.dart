@@ -1,9 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
-import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
-import 'package:widgets_app/presentation/screens/settings/settings_screen.dart';
+import 'package:widgets_app/presentation/screens/screens.dart';
 
-import '../../presentation/screens/home/home_screen.dart';
 
 // GoRouter configuration
 final goAppRouter = GoRouter(
@@ -14,15 +11,23 @@ final goAppRouter = GoRouter(
       path: '/',
       name: HomeScreen.name,
       builder: (context, state) => const HomeScreen(),
-    ),GoRoute(
+    ),
+    GoRoute(
       path: '/buttons',
       name: ButtonsScreen.name,
       builder: (context, state) => const ButtonsScreen(),
-    ),GoRoute(
+    ),
+    GoRoute(
       path: '/cards',
       name: CardsScreen.name,
       builder: (context, state) => const CardsScreen(),
-    ),GoRoute(
+    ),
+      GoRoute(
+      path: '/progress',
+      name: ProgressScreen.name,
+      builder: (context, state) => const ProgressScreen(),
+    ),
+    GoRoute(
       path: '/settings',
       name: SettingsScreen.name,
       builder: (context, state) => const SettingsScreen(),
