@@ -34,6 +34,13 @@ const appMenuItems = <MenuItems>[
     routeName: '/cards_screen', 
   ),
   MenuItems(
+    title: 'Tarjetas',
+    subTitle: 'Un contenedor estilizado',
+    link: '/cards',
+    icon: Icons.credit_card,
+    routeName: '/cards_screen', 
+  ),
+  MenuItems(
     title: 'Settings',
     subTitle: 'Configuraciones de Usuario',
     link: '/settings',
