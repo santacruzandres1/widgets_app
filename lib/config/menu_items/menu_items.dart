@@ -34,13 +34,20 @@ const appMenuItems = <MenuItems>[
     // routeName: '/cards_screen', 
   ),
   MenuItems(
-    title: 'ProgressIndicator',
+    title: 'Progress Indicator',
     subTitle: 'Generales y controlados',
     link: '/progress',
     icon: Icons.refresh_rounded,
     // routeName: '/progress_screen', 
   ),
   MenuItems(
+    title: 'Snackbar y diálogos',
+    subTitle: 'Indicadores de pantalla',
+    link: '/snackbar',
+    icon: Icons.info_outline,
+    // routeName: '/settings_screen', 
+  ),
+    MenuItems(
     title: 'Settings',
     subTitle: 'Configuraciones de Usuario',
     link: '/settings',

@@ -27,6 +27,11 @@ final goAppRouter = GoRouter(
       name: ProgressScreen.name,
       builder: (context, state) => const ProgressScreen(),
     ),
+      GoRoute(
+      path: '/snackbar',
+      name: SnackbarScreen.name,
+      builder: (context, state) => const SnackbarScreen(),
+    ),
     GoRoute(
       path: '/settings',
       name: SettingsScreen.name,
