@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/widgets/buttons/custom_buttons.dart';
 
 class ButtonsScreen extends StatelessWidget {
   static const String name = 'buttons_screen';
@@ -59,6 +60,8 @@ class _ButtonsView extends StatelessWidget {
                     iconColor: const MaterialStatePropertyAll(Colors.white), 
                     ),
                  ),
+                 //Custom Buttons
+                 const CustomButton()
           ],
         ),
       ),
