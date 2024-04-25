@@ -15,9 +15,7 @@ class MainApp extends StatelessWidget {
       routerConfig: goAppRouter,
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 2).getTheme(),
-      // home:  const HomeScreen(), // 
-      // routes: AppRouter.routes, // Para go_router no vamos a utilizar estas rutas
-                                  //incluso se puede remover la definicion del 'home' anterior
+      title: 'Flutter Widgets App',
 
     );
   }
