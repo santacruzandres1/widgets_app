@@ -48,6 +48,13 @@ const appMenuItems = <MenuItems>[
     // routeName: '/settings_screen', 
   ),
     MenuItems(
+    title: 'Animated Container',
+    subTitle: 'This is an animated container',
+    link: '/animated',
+    icon: Icons.info_outline,
+    // routeName: '/settings_screen', 
+  ),
+    MenuItems(
     title: 'Settings',
     subTitle: 'Configuraciones de Usuario',
     link: '/settings',
