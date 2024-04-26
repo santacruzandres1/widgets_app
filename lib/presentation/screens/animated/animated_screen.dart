@@ -15,10 +15,10 @@ class AnimatedScreeen extends StatefulWidget {
 class _AnimatedScreeenState extends State<AnimatedScreeen> {
   
 
-   double width = 20.0;
-   double height = 20.0;
+   double width = 100;
+   double height = 100;
    Color  color = Colors.indigo;
-   double borderRadius = 20.0;
+   double borderRadius = 20;
 
   void randomShape(){
     final random = Random(); 
@@ -41,8 +41,8 @@ class _AnimatedScreeenState extends State<AnimatedScreeen> {
         child: Center(
           child: AnimatedContainer(
             duration:const Duration(seconds: 2),
-            width: width<=0?0:width,
-            height: height<=0?0:height,
+            width: width<=0?20:width,
+            height: height<=0?20:height,
             decoration: BoxDecoration(color:color, borderRadius: BorderRadius.circular(borderRadius<0?0:borderRadius)),
             curve: Curves.elasticOut,
             ),

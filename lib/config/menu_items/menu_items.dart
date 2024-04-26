@@ -51,7 +51,14 @@ const appMenuItems = <MenuItems>[
     title: 'Animated Container',
     subTitle: 'This is an animated container',
     link: '/animated',
-    icon: Icons.info_outline,
+    icon: Icons.check_box_outline_blank_outlined,
+    // routeName: '/settings_screen', 
+  ),
+  MenuItems(
+    title: 'UI Controls',
+    subTitle: 'A group of control buttons',
+    link: '/ui-controls',
+    icon: Icons.drive_eta_sharp,
     // routeName: '/settings_screen', 
   ),
     MenuItems(
