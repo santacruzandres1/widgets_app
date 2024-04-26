@@ -62,6 +62,13 @@ const appMenuItems = <MenuItems>[
     // routeName: '/settings_screen', 
   ),
     MenuItems(
+    title: 'App tutorial',
+    subTitle: 'A little introduction tutorial',
+    link: '/app-tutorial',
+    icon: Icons.accessibility_new_rounded,
+    // routeName: '/settings_screen', 
+  ),
+    MenuItems(
     title: 'Settings',
     subTitle: 'Configuraciones de Usuario',
     link: '/settings',
