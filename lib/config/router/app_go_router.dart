@@ -44,6 +44,14 @@ final goAppRouter = GoRouter(
       path: '/app-tutorial',
       builder: (context, state) => const AppTutorialScreen(),
     ),
+      GoRoute(
+      path: '/screen-counter',
+      builder: (context, state) => const ScreenCounter(),
+    ),
+    GoRoute(
+      path: '/theme-changer',
+      builder: (context, state) => const ThemeChangerScreen(),
+    ),
     GoRoute(
       path: '/settings',
       name: SettingsScreen.name,

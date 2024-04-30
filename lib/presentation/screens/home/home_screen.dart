@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu_items/menu_items.dart';
+import 'package:widgets_app/presentation/widgets/drawers/side_menu.dart';
 // import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,12 +11,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scafoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
+      key: scafoldKey,
       appBar: AppBar(
         centerTitle: false,
         title: const Text('Widgets en flutter'),
       ),
       body: const _HomeView(appMenuItems: appMenuItems),
+      drawer:  SideMenu(scafoldKey: scafoldKey,),
     );
   }
 }
@@ -51,17 +55,8 @@ class _CustomListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        //   final routeName = menuItem.routeName;
-
-        //   if (AppRouter.routes.containsKey(routeName)) {
-        //     Navigator.pushNamed(context, routeName);
-        //   } else {
-        //     // Aca podria estar el manejo de errores(rutas invalidas)
-        //     throw const Text('Error 404: Ivalid path');
-        //   }
 
         context.push(menuItem.link);
-        // context.pushNamed(CardsScreen.name);
       },
     );
   }
