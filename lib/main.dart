@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widgets_app/config/router/app_go_router.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
+import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
 void main() {
   runApp( const ProviderScope(child: MainApp()));
@@ -12,10 +13,12 @@ class MainApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final int colorTheme = ref.watch(selectedColorIndexProvider);
+    final bool isDarkMode = ref.watch(isDarkModeProvider);
     return MaterialApp.router(
       routerConfig: goAppRouter,
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 4).getTheme(),
+      theme: AppTheme(selectedColor: colorTheme, isDarkMode:isDarkMode).getTheme(),
       title: 'Flutter Widgets App',
 
     );

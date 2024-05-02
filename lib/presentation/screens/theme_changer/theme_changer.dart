@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:widgets_app/config/theme/app_theme.dart';
 import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
 class ThemeChangerScreen extends ConsumerWidget {
@@ -34,6 +33,7 @@ class _ThemeChangerView extends ConsumerWidget {
   Widget build(BuildContext context, ref) {
 
     final List<Color>colors=ref.watch(colorListProvider);
+    final int selectedColorIndex = ref.watch(selectedColorIndexProvider);
     return ListView.builder(
       itemCount: colors.length,
       itemBuilder: (context, index) {
@@ -42,11 +42,12 @@ class _ThemeChangerView extends ConsumerWidget {
        RadioListTile(
         title: Text('Este Color', style: TextStyle(color: color),),
         subtitle: Text('${color.value}',),
+        activeColor: color,
         value: index,
-        groupValue:0 ,
+        groupValue: selectedColorIndex,
         onChanged: (value){
-          //TODO: notificar
-        },
+        ref.read(selectedColorIndexProvider.notifier).state=index;
+                },
         
 
       )
